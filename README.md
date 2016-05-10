@@ -11,8 +11,8 @@ shell使用:
 > 下载
 终端执行 two_downloadGit.sh Github链接 下载的本地路径
 
-.e.g  two_downloadGit.sh https://github.com/robbiehanson/CocoaAsyncSocket/archive/master.zip ~/Desktop
+#.e.g  two_downloadGit.sh https://github.com/robbiehanson/CocoaAsyncSocket/archive/master.zip ~/Desktop
 
-.e.g  two_downloadGit.sh https://github.com/robbiehanson/CocoaAsyncSocket ~/Desktop
+#.e.g  two_downloadGit.sh https://github.com/robbiehanson/CocoaAsyncSocket ~/Desktop
 
-.e.g  two_downloadGit.sh https://github.com/robbiehanson/CocoaAsyncSocket.git ~/Desktop
+#.e.g  two_downloadGit.sh https://github.com/robbiehanson/CocoaAsyncSocket.git ~/Desktop
