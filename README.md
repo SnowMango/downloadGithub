@@ -1,4 +1,4 @@
-# downloadGithub
+# DownloadGithub
 mac 终端下载Github上资源的shell
 
 Shell使用:
