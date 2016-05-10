@@ -6,7 +6,7 @@ Shell使用:
 
 ### 可执行权限
 
-> 打开终端 cd shell当前目录
+> 打开终端 cd shell当前目录      
 > 执行 chmod +x two_downloadGit.sh
 
 ### 下载
