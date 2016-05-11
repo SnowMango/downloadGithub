@@ -51,6 +51,6 @@ done
 #下载完成的后续操作
 rm -f $REAL_DOWNLOAD_FILE
 if [ -d "$INPUT_DIR/${LOCAL_NAME}-master" ];then
-rm -f ${LOCAL_NAME}.zip
+rm -rf ${LOCAL_NAME}.zip
 open "$INPUT_DIR/${LOCAL_NAME}-master"
 fi
