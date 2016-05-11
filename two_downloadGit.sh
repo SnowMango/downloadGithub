@@ -32,14 +32,14 @@ LOCAL_NAME="${LOCAL_NAME##*/}"
 
 echo "Ready to downlaod $LOCAL_NAME files"
 #设置临时文件名
-REAL_DOWNLOAD_FILE="${LOCAL_NAME}.zfeng"
+REAL_DOWNLOAD_FILE="${LOCAL_NAME}.zfeng.download"
 
 cd $INPUT_DIR
 #下载包含真实路径的临时文件
 curl -o $REAL_DOWNLOAD_FILE $DOWNLOAD_URL
 
 #读取临时文件，获得最终下载地址
-cat "$LOCAL_NAME.zfeng" | grep -i 'href' | sed -e 's/.*="//g' | sed -e 's/".*//g' | while read REAL_URL
+cat "$REAL_DOWNLOAD_FILE" | grep -i 'href' | sed -e 's/.*="//g' | sed -e 's/".*//g' | while read REAL_URL
 do
 [ -z $REAL_URL ]&&[ -f '${INPUT_DIR}/${LOCAL_NAME}.zip' ]&&continue
 echo "Real download url:$REAL_URL"
@@ -51,5 +51,6 @@ done
 #下载完成的后续操作
 rm -f $REAL_DOWNLOAD_FILE
 if [ -d "$INPUT_DIR/${LOCAL_NAME}-master" ];then
+rm -f ${LOCAL_NAME}.zip
 open "$INPUT_DIR/${LOCAL_NAME}-master"
 fi
